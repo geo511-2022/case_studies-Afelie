@@ -30,3 +30,4 @@ ggplot(Merge)+
 MergeArea<- st_area(Merge)
 set_units(MergeArea, km^2)
 
+#Havent fixed plot window issue yet
