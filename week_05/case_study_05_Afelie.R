@@ -23,6 +23,9 @@ Merge <- st_intersection(Buffer_Canada, Filter_US)
 
 ggplot(Merge)+
   geom_sf(data = Filter_US)+
-  geom_sf(data = Merge, fill = "Red" )
+  geom_sf(data = Merge, fill = "Red" )+
+  labs(title = "New York Land Within 10km")+
+  theme(plot.title = element_text(hjust = 0.5))
+
 MergeArea<- st_area(Merge)
 set_units(MergeArea, km^2)
