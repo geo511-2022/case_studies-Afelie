@@ -29,3 +29,4 @@ ggplot(Merge)+
 
 MergeArea<- st_area(Merge)
 set_units(MergeArea, km^2)
+
