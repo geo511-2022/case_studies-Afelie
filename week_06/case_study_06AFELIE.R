@@ -28,3 +28,7 @@ ggplot(tmax_country, aes(fill = tmean)) +
   scale_fill_viridis_c(name="Annual\nMaximum\nTemperature (C)")+
   theme(legend.position = 'bottom')
 
+
+hottest_country <- tmax_country %>%
+  group_by(continent) %>%
+  top_n(1, tmax)
