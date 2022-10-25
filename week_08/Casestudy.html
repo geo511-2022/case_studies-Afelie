@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="data:text/css,%0A%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%7B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Atext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%23333%3B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20%22Segoe%20UI%22%2C%20Arial%2C%20freesans%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E6%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0A%7D%0Aa%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Aa%3Aactive%2C%0Aa%3Ahover%20%7B%0Aoutline%3A%200%3B%0A%7D%0Astrong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0Aimg%20%7B%0Aborder%3A%200%3B%0A%7D%0Ahr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0A%7D%0Apre%20%7B%0Aoverflow%3A%20auto%3B%0A%7D%0Acode%2C%0Akbd%2C%0Apre%20%7B%0Afont%2Dfamily%3A%20monospace%2C%20monospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Ainput%20%7B%0Acolor%3A%20inherit%3B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Ahtml%20input%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0A%7D%0Ainput%20%7B%0Aline%2Dheight%3A%20normal%3B%0A%7D%0Ainput%5Btype%3D%22checkbox%22%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Atable%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Atd%2C%0Ath%20%7B%0Apadding%3A%200%3B%0A%7D%0A%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Ainput%20%7B%0Afont%3A%2013px%20%2F%201%2E4%20Helvetica%2C%20arial%2C%20nimbussansl%2C%20liberationsans%2C%20freesans%2C%20clean%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%234078c0%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%2C%0Aa%3Aactive%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Ahr%20%7B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23ddd%3B%0A%7D%0Ahr%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Ahr%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%2C%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dtop%3A%2015px%3B%0Amargin%2Dbottom%3A%2015px%3B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ah1%20%7B%0Afont%2Dsize%3A%2030px%3B%0A%7D%0Ah2%20%7B%0Afont%2Dsize%3A%2021px%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%2011px%3B%0A%7D%0Ablockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Aul%2C%0Aol%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Aol%20ol%2C%0Aul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Aul%20ul%20ol%2C%0Aul%20ol%20ol%2C%0Aol%20ul%20ol%2C%0Aol%20ol%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Add%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Apre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0Afont%3A%2012px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0A%7D%0A%2Eselect%3A%3A%2Dms%2Dexpand%20%7B%0Aopacity%3A%200%3B%0A%7D%0A%2Eocticon%20%7B%0Afont%3A%20normal%20normal%20normal%2016px%2F1%20octicons%2Dlink%3B%0Adisplay%3A%20inline%2Dblock%3B%0Atext%2Ddecoration%3A%20none%3B%0Atext%2Drendering%3A%20auto%3B%0A%2Dwebkit%2Dfont%2Dsmoothing%3A%20antialiased%3B%0A%2Dmoz%2Dosx%2Dfont%2Dsmoothing%3A%20grayscale%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0Auser%2Dselect%3A%20none%3B%0A%7D%0A%2Eocticon%2Dlink%3Abefore%20%7B%0Acontent%3A%20%27%5Cf05c%27%3B%0A%7D%0A%2Emarkdown%2Dbody%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0A%2Emarkdown%2Dbody%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0A%2Emarkdown%2Dbody%3E%2A%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%20%21important%3B%0A%7D%0A%2Emarkdown%2Dbody%3E%2A%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%20%21important%3B%0A%7D%0Aa%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0A%2Eanchor%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%2Dright%3A%202px%3B%0Amargin%2Dleft%3A%20%2D18px%3B%0A%7D%0A%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Ah1%2C%0Ah2%2C%0Ah3%2C%0Ah4%2C%0Ah5%2C%0Ah6%20%7B%0Amargin%2Dtop%3A%201em%3B%0Amargin%2Dbottom%3A%2016px%3B%0Afont%2Dweight%3A%20bold%3B%0Aline%2Dheight%3A%201%2E4%3B%0A%7D%0Ah1%20%2Eocticon%2Dlink%2C%0Ah2%20%2Eocticon%2Dlink%2C%0Ah3%20%2Eocticon%2Dlink%2C%0Ah4%20%2Eocticon%2Dlink%2C%0Ah5%20%2Eocticon%2Dlink%2C%0Ah6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%23000%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Ah1%3Ahover%20%2Eanchor%2C%0Ah2%3Ahover%20%2Eanchor%2C%0Ah3%3Ahover%20%2Eanchor%2C%0Ah4%3Ahover%20%2Eanchor%2C%0Ah5%3Ahover%20%2Eanchor%2C%0Ah6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Ah1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Ah6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Ah1%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%202%2E25em%3B%0Aline%2Dheight%3A%201%2E2%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23eee%3B%0A%7D%0Ah1%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Ah2%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E75em%3B%0Aline%2Dheight%3A%201%2E225%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23eee%3B%0A%7D%0Ah2%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Ah3%20%7B%0Afont%2Dsize%3A%201%2E5em%3B%0Aline%2Dheight%3A%201%2E43%3B%0A%7D%0Ah3%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Ah4%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0A%7D%0Ah4%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Ah5%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Ah5%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ah6%20%7B%0Afont%2Dsize%3A%201em%3B%0Acolor%3A%20%23777%3B%0A%7D%0Ah6%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Ap%2C%0Ablockquote%2C%0Aul%2C%0Aol%2C%0Adl%2C%0Atable%2C%0Apre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Ahr%20%7B%0Aheight%3A%204px%3B%0Apadding%3A%200%3B%0Amargin%3A%2016px%200%3B%0Abackground%2Dcolor%3A%20%23e7e7e7%3B%0Aborder%3A%200%20none%3B%0A%7D%0Aul%2C%0Aol%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Aul%20ul%2C%0Aul%20ol%2C%0Aol%20ol%2C%0Aol%20ul%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Ali%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Adl%20%7B%0Apadding%3A%200%3B%0A%7D%0Adl%20dt%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%2016px%3B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Adl%20dd%20%7B%0Apadding%3A%200%2016px%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Ablockquote%20%7B%0Apadding%3A%200%2015px%3B%0Acolor%3A%20%23777%3B%0Aborder%2Dleft%3A%204px%20solid%20%23ddd%3B%0A%7D%0Ablockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Ablockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Atable%20%7B%0Adisplay%3A%20block%3B%0Awidth%3A%20100%25%3B%0Aoverflow%3A%20auto%3B%0Aword%2Dbreak%3A%20normal%3B%0Aword%2Dbreak%3A%20keep%2Dall%3B%0A%7D%0Atable%20th%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Atable%20th%2C%0Atable%20td%20%7B%0Apadding%3A%206px%2013px%3B%0Aborder%3A%201px%20solid%20%23ddd%3B%0A%7D%0Atable%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23ccc%3B%0A%7D%0Atable%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f8f8f8%3B%0A%7D%0Aimg%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Abackground%2Dcolor%3A%20%23fff%3B%0A%7D%0Acode%20%7B%0Apadding%3A%200%3B%0Apadding%2Dtop%3A%200%2E2em%3B%0Apadding%2Dbottom%3A%200%2E2em%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%2085%25%3B%0Abackground%2Dcolor%3A%20rgba%280%2C0%2C0%2C0%2E04%29%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0Acode%3Abefore%2C%0Acode%3Aafter%20%7B%0Aletter%2Dspacing%3A%20%2D0%2E2em%3B%0Acontent%3A%20%22%5C00a0%22%3B%0A%7D%0Apre%3Ecode%20%7B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Aword%2Dbreak%3A%20normal%3B%0Awhite%2Dspace%3A%20pre%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0A%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0A%2Ehighlight%20pre%2C%0Apre%20%7B%0Apadding%3A%2016px%3B%0Aoverflow%3A%20auto%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0A%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Apre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Apre%20code%20%7B%0Adisplay%3A%20inline%3B%0Amax%2Dwidth%3A%20initial%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Aoverflow%3A%20initial%3B%0Aline%2Dheight%3A%20inherit%3B%0Aword%2Dwrap%3A%20normal%3B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Apre%20code%3Abefore%2C%0Apre%20code%3Aafter%20%7B%0Acontent%3A%20normal%3B%0A%7D%0Akbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0A%2Epl%2Dc%20%7B%0Acolor%3A%20%23969896%3B%0A%7D%0A%2Epl%2Dc1%2C%0A%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%230086b3%3B%0A%7D%0A%2Epl%2De%2C%0A%2Epl%2Den%20%7B%0Acolor%3A%20%23795da3%3B%0A%7D%0A%2Epl%2Ds%20%2Epl%2Ds1%2C%0A%2Epl%2Dsmi%20%7B%0Acolor%3A%20%23333%3B%0A%7D%0A%2Epl%2Dent%20%7B%0Acolor%3A%20%2363a35c%3B%0A%7D%0A%2Epl%2Dk%20%7B%0Acolor%3A%20%23a71d5d%3B%0A%7D%0A%2Epl%2Dpds%2C%0A%2Epl%2Ds%2C%0A%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0A%2Epl%2Dsr%2C%0A%2Epl%2Dsr%20%2Epl%2Dcce%2C%0A%2Epl%2Dsr%20%2Epl%2Dsra%2C%0A%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23183691%3B%0A%7D%0A%2Epl%2Dv%20%7B%0Acolor%3A%20%23ed6a43%3B%0A%7D%0A%2Epl%2Did%20%7B%0Acolor%3A%20%23b52a1d%3B%0A%7D%0A%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b52a1d%3B%0Acolor%3A%20%23f8f8f8%3B%0A%7D%0A%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2363a35c%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dml%20%7B%0Acolor%3A%20%23693a17%3B%0A%7D%0A%2Epl%2Dmh%2C%0A%2Epl%2Dmh%20%2Epl%2Den%2C%0A%2Epl%2Dms%20%7B%0Acolor%3A%20%231d3e81%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmq%20%7B%0Acolor%3A%20%23008080%3B%0A%7D%0A%2Epl%2Dmi%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0A%2Epl%2Dmb%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffecec%3B%0Acolor%3A%20%23bd2c00%3B%0A%7D%0A%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23eaffea%3B%0Acolor%3A%20%2355a532%3B%0A%7D%0A%2Epl%2Dmdr%20%7B%0Acolor%3A%20%23795da3%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%2Epl%2Dmo%20%7B%0Acolor%3A%20%231d3e81%3B%0A%7D%0Akbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%3A%2011px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0A%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%200%2E35em%200%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0A%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Az%2Dindex%3A%201%3B%0Aposition%3A%20relative%3B%0Aborder%2Dcolor%3A%20%234078c0%3B%0A%7D%0A%2EsourceLine%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0A%7D%0Acode%20%2Ekw%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Edt%20%7B%20color%3A%20%23ed6a43%3B%20%7D%0Acode%20%2Edv%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Ebn%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Efl%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Ech%20%7B%20color%3A%20%23009999%3B%20%7D%0Acode%20%2Est%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Eco%20%7B%20color%3A%20%23969896%3B%20%7D%0Acode%20%2Eot%20%7B%20color%3A%20%230086b3%3B%20%7D%0Acode%20%2Eal%20%7B%20color%3A%20%23a61717%3B%20%7D%0Acode%20%2Efu%20%7B%20color%3A%20%2363a35c%3B%20%7D%0Acode%20%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%0Acode%20%2Ewa%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Ecn%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Esc%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Evs%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Ess%20%7B%20color%3A%20%23183691%3B%20%7D%0Acode%20%2Eim%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eva%20%7Bcolor%3A%20%23008080%3B%20%7D%0Acode%20%2Ecf%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eop%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Ebu%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Eex%20%7B%20color%3A%20%23000000%3B%20%7D%0Acode%20%2Epp%20%7B%20color%3A%20%23999999%3B%20%7D%0Acode%20%2Eat%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Edo%20%7B%20color%3A%20%23969896%3B%20%7D%0Acode%20%2Ean%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Ecv%20%7B%20color%3A%20%23008080%3B%20%7D%0Acode%20%2Ein%20%7B%20color%3A%20%23008080%3B%20%7D%0A">
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="case-study-8">Case Study 8</h1>
+<p>Adrian Elie 10/25/2022</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>CO <span class="ot">&lt;-</span> <span class="fu">read_table</span>(<span class="st">&quot;ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt&quot;</span>, <span class="at">skip =</span> <span class="dv">56</span>)</span></code></pre></div>
+<pre><code>## 
+## -- Column specification --------------------------------------------------------
+## cols(
+##   `#` = col_double(),
+##   year = col_double(),
+##   mean = col_double(),
+##   unc = col_character()
+## )
+
+## Warning: 63 parsing failures.
+## row col  expected    actual                                                               file
+##   1  -- 4 columns 3 columns &#39;ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt&#39;
+##   2  -- 4 columns 3 columns &#39;ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt&#39;
+##   3  -- 4 columns 3 columns &#39;ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt&#39;
+##   4  -- 4 columns 3 columns &#39;ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt&#39;
+##   5  -- 4 columns 3 columns &#39;ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt&#39;
+## ... ... ......... ......... ..................................................................
+## See problems(...) for more details.</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>CO</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(CO, <span class="at">n =</span> <span class="dv">60</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Workplease <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(CO, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">#</span><span class="st">`</span>, <span class="at">y =</span> year))<span class="sc">+</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;CO2 concentration&quot;</span>)<span class="sc">+</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggtitle</span>(<span class="st">&quot;Rise in CO2 levels since 1959&quot;</span>) <span class="sc">+</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>)) </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>Workplease</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>table <span class="ot">&lt;-</span> knitr<span class="sc">::</span><span class="fu">kable</span>(CO, <span class="at">formal =</span> <span class="st">&quot;pipe&quot;</span>,) </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>table</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+#
+</th>
+<th style="text-align:right;">
+year
+</th>
+<th style="text-align:right;">
+mean
+</th>
+<th style="text-align:left;">
+unc
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1959
+</td>
+<td style="text-align:right;">
+315.98
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1960
+</td>
+<td style="text-align:right;">
+316.91
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1961
+</td>
+<td style="text-align:right;">
+317.64
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1962
+</td>
+<td style="text-align:right;">
+318.45
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1963
+</td>
+<td style="text-align:right;">
+318.99
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1964
+</td>
+<td style="text-align:right;">
+319.62
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1965
+</td>
+<td style="text-align:right;">
+320.04
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1966
+</td>
+<td style="text-align:right;">
+321.37
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1967
+</td>
+<td style="text-align:right;">
+322.18
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1968
+</td>
+<td style="text-align:right;">
+323.05
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1969
+</td>
+<td style="text-align:right;">
+324.62
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1970
+</td>
+<td style="text-align:right;">
+325.68
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1971
+</td>
+<td style="text-align:right;">
+326.32
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1972
+</td>
+<td style="text-align:right;">
+327.46
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1973
+</td>
+<td style="text-align:right;">
+329.68
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1974
+</td>
+<td style="text-align:right;">
+330.19
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1975
+</td>
+<td style="text-align:right;">
+331.13
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1976
+</td>
+<td style="text-align:right;">
+332.03
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1977
+</td>
+<td style="text-align:right;">
+333.84
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1978
+</td>
+<td style="text-align:right;">
+335.41
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1979
+</td>
+<td style="text-align:right;">
+336.84
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1980
+</td>
+<td style="text-align:right;">
+338.76
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1981
+</td>
+<td style="text-align:right;">
+340.12
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1982
+</td>
+<td style="text-align:right;">
+341.48
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1983
+</td>
+<td style="text-align:right;">
+343.15
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1984
+</td>
+<td style="text-align:right;">
+344.87
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1985
+</td>
+<td style="text-align:right;">
+346.35
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1986
+</td>
+<td style="text-align:right;">
+347.61
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1987
+</td>
+<td style="text-align:right;">
+349.31
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1988
+</td>
+<td style="text-align:right;">
+351.69
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1989
+</td>
+<td style="text-align:right;">
+353.20
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1990
+</td>
+<td style="text-align:right;">
+354.45
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1991
+</td>
+<td style="text-align:right;">
+355.70
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1992
+</td>
+<td style="text-align:right;">
+356.54
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1993
+</td>
+<td style="text-align:right;">
+357.21
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1994
+</td>
+<td style="text-align:right;">
+358.96
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1995
+</td>
+<td style="text-align:right;">
+360.97
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1996
+</td>
+<td style="text-align:right;">
+362.74
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1997
+</td>
+<td style="text-align:right;">
+363.88
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1998
+</td>
+<td style="text-align:right;">
+366.84
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+1999
+</td>
+<td style="text-align:right;">
+368.54
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2000
+</td>
+<td style="text-align:right;">
+369.71
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2001
+</td>
+<td style="text-align:right;">
+371.32
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2002
+</td>
+<td style="text-align:right;">
+373.45
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2003
+</td>
+<td style="text-align:right;">
+375.98
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2004
+</td>
+<td style="text-align:right;">
+377.70
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2005
+</td>
+<td style="text-align:right;">
+379.98
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2006
+</td>
+<td style="text-align:right;">
+382.09
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2007
+</td>
+<td style="text-align:right;">
+384.02
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2008
+</td>
+<td style="text-align:right;">
+385.83
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2009
+</td>
+<td style="text-align:right;">
+387.64
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2010
+</td>
+<td style="text-align:right;">
+390.10
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2011
+</td>
+<td style="text-align:right;">
+391.85
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2012
+</td>
+<td style="text-align:right;">
+394.06
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2013
+</td>
+<td style="text-align:right;">
+396.74
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2014
+</td>
+<td style="text-align:right;">
+398.81
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2015
+</td>
+<td style="text-align:right;">
+401.01
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2016
+</td>
+<td style="text-align:right;">
+404.41
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2017
+</td>
+<td style="text-align:right;">
+406.76
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2018
+</td>
+<td style="text-align:right;">
+408.72
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2019
+</td>
+<td style="text-align:right;">
+411.66
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2020
+</td>
+<td style="text-align:right;">
+414.24
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2021
+</td>
+<td style="text-align:right;">
+416.45
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
