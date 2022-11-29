@@ -1,0 +1,49 @@
+---
+title: "Invasive Species Distribution and Temperature"
+author: Adrian Elie
+output: 
+  github_document
+---
+
+[<i class="fa fa-file-code-o fa-1x" aria-hidden="true"></i> Download this file as a template ](http://adamwilson.us/SpatialDataScience/scripts/Project_ProposalTemplate.Rmd).
+
+# Introduction to problem/question
+  
+# Problem / Question
+Is there a mappable connection between average temperatures and the population distribution of an invasive species. 
+
+# Inspiring Examples
+
+Include links and screenshots (or embedded images) of a few (~3-5) example graphics found on the internet that convey what you want to do.  Include a few sentences about why you selected each link.
+
+## Example 1
+![](https://www.researchgate.net/publication/330987105/figure/fig1/AS:961351069495300@1606215364106/Indicative-maps-of-Invasive-species-distribution-in-India-a-enumerated-in-a-004ha-nested.png)
+
+This graphic highlights the mapping systems I may try to emulate.  The graphic summarizes different biogeographic zones in India and compares them to the number of invasive species present in an area.  This type of graphic shifted to temperature averages of a given year or season and moved to the U.S could help my project. 
+
+## Example 2
+![](https://www.researchgate.net/profile/Liang-Liang-34/publication/259634309/figure/fig2/AS:297136185987073@1447854195433/Emerald-ash-borer-EAB-Agrilus-planipennis-Fairmaire-infested-areas-as-of-September-5.png)
+
+This graphics showcases how multiple mappings may be used for this project. The graphic showcases the range of the Emerald Ash Borer in 2013 as well as several other maps showcasing various climate models to predict the change in suitability and spread of the emerald ash borer by 2020. 
+
+## Example 3
+![](https://journals.plos.org/plosone/article/figure?id=10.1371/journal.pone.0133771.g002)
+
+This graphic has an interesting temperature mapping system that may be useful to mimic for the end results of the project. Two of the maps showcase the percentage of days when temperatures are above 35 degrees and below -4 degrees in various parts of the U.S. Mapping how often certain areas reach high temperatures may be useful to better understanding the population distribution of an invasive species. 
+
+# Proposed data sources
+
+https://www1.ncdc.noaa.gov/pub/data/noaa/ Climate and Temperature Information
+https://www.gbif.org/ Wildlife Data 
+https://github.com/ropensci-archive/rvertnet Wildlife Data
+https://bison.usgs.gov Wildlife Data 
+
+# Proposed methods
+
+The packages that will likely be used are ggplot2, dplyr, sf, climate, and spocc. 
+
+  Using the climate and spocc packages I will gather and format the required temperature and climate data as well as species occurrences and spatial position data in order to analyze and map the desired information. Using dplyr and sf I will proceed to create several maps showcasing the spatial objects of located specimens and then create a fill layer of temperature averages and potentially other climate data in order to see how an invasive species such as the Emerald Ash Borer or the Cane Toad is distributed in the United States. 
+
+# Expected results
+
+The expected end result of this project should be a series of maps of the United States showcasing the range of an invasive species(or multiple) such as the Emerald Ash Borer and what temperature averages they are predominately located in. As well as what averages they seem to avoid. 

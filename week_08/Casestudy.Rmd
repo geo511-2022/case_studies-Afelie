@@ -1,0 +1,42 @@
+---
+title: "Case Study 8"
+author: "Adrian Elie"
+date: "10/25/2022"
+output: 
+  html_document: default
+  github_document: default
+  powerpoint_presentation: default
+  word_document: default
+---
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(kableExtra)
+
+CO <- read_table("ftp://aftp.cmdl.noaa.gov/products/trends/co2/co2_annmean_mlo.txt", skip = 56)
+CO
+
+print(CO, n = 60)
+
+Workplease <- ggplot(CO, aes(x = `#`, y = year))+ 
+geom_line()+
+labs(x = "Year", y = "CO2 concentration")+
+ggtitle("Rise in CO2 levels since 1959") +
+theme(plot.title = element_text(hjust = 0.5)) 
+
+Workplease
+
+table <- knitr::kable(CO, formal = "pipe",) %>% 
+  as_image(width = 10,file = "table.png")
+
+table
+
+#rmarkdown::render("Casestudy.Rmd", output_format = "all")
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
